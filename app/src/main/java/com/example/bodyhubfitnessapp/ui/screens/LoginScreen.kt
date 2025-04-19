@@ -1,5 +1,6 @@
 package com.example.bodyhubfitnessapp.ui.screens
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.*
@@ -7,7 +8,9 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
@@ -17,6 +20,7 @@ import androidx.navigation.NavHostController
 import com.example.bodyhubfitnessapp.data.UserPreferences
 import com.example.bodyhubfitnessapp.ui.DiagonalBackground
 import kotlinx.coroutines.launch
+import com.example.bodyhubfitnessapp.R
 
 @Composable
 fun LoginScreen(navController: NavHostController) {
@@ -34,17 +38,21 @@ fun LoginScreen(navController: NavHostController) {
                 .fillMaxSize()
                 .padding(16.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.Center
+            verticalArrangement = Arrangement.Top
         ) {
+            Spacer(modifier = Modifier.height(24.dp))
+
+
+            Spacer(modifier = Modifier.height(24.dp))
+
             Text(
-                text = "Login",
-                fontSize = 32.sp,
+                text = "BodyHub",
+                fontSize = 36.sp,
                 fontWeight = FontWeight.Bold,
-                color = Color.White
+                color = Color(0xFFFF8600)
             )
 
             Spacer(modifier = Modifier.height(16.dp))
-
             OutlinedTextField(
                 value = email,
                 onValueChange = { email = it },
