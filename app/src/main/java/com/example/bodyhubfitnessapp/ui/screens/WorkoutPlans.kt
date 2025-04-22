@@ -36,6 +36,7 @@ fun WorkoutPlansScreen(navController: NavHostController) {
         Column(
             modifier = Modifier
                 .padding(padding)
+
                 .fillMaxSize()
                 .background(Color(0xFFFF9100))
                 .verticalScroll(rememberScrollState())
@@ -54,15 +55,17 @@ fun WorkoutPlansScreen(navController: NavHostController) {
                     fontWeight = FontWeight.Bold
                 )
             }
+            Spacer(modifier = Modifier.height(30.dp))
+
 
             WorkoutPlanItem("Strength", R.drawable.strength) {
                 navController.navigate(Screen.StrengthExercise.route)
             }
             WorkoutPlanItem("Cardio", R.drawable.cardio) {
-                navController.navigate(Screen.Exercise.route)
+                navController.navigate(Screen.CardioExercise.route)
             }
             WorkoutPlanItem("Yoga", R.drawable.yoga) {
-                navController.navigate(Screen.Exercise.route)
+                navController.navigate(Screen.YOGAExercise.route)
             }
         }
     }
